@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Maas Hesap Makinesi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            min-width: 360px;
+            max-width: 550px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        .header {
+            text-align: left;
+        }
+        .logo {
+            display: inline-block;
+            background: #0000ff;
+            color: #fff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .header-title {
+            display: inline;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .main-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 11px;
+        }
+        .red-text {
+            color: red;
+            font-weight: bold;
+            font-size: 11px;
+        }
+        .form {
+            display: grid;
+            grid-template-columns: 70% 30%;
+            border: 1px solid #a0a0a0;
+        }
+        .label, .value {
+            padding: 3px 5px;
+
+        }
+        .labels {
+            background: #e0e0e0;
+        }
+        .value {
+            background: #fff;
+            text-align: right;
+        }
+        .input-value {
+            background: #ffd966;
+            border: 1px solid #ff0000;
+        }
+        .input-value input {
+            width: 100%;
+            border: none;
+            background: transparent;
+            text-align: center;
+            font-weight: bold;
+        }
+        .dropdown-value {
+            position: relative;
+            background: #ffd966;
+            text-align: right;
+            border: 1px solid #ff0000;
+        }
+        .dropdown-value select {
+            width: 100%;
+            border: none;
+            background: transparent;
+            text-align: center;
+            appearance: none;
+            font-weight: bold;
+            padding-right: 15px;
+        }
+        .dropdown-value::after {
+            content: '';
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid gray;
+            pointer-events: none;
+        }
+        .checkbox-value {
+            background: #ffd966;
+            text-align: center;
+            border: 1px solid #ff0000;
+        }
+        .checkbox-value input[type="checkbox"] {
+            margin: 0;
+            float: center;
+        }
+        .blue {
+            color: #0000ff;
+        }
+        .signature {
+            text-align: right;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">C</div><span class="header-title"> GÖÇ YASALI (4721/2010)</span>
+            <div class="main-title">Net Maas Hesap Makinesi</div>
+        </div>
+        <div class="form">
+            <div class="labels">Cinsiyet / Medeni Durum</div>
+            <div class="value dropdown-value"><select>
+            <option>Kadın</option>
+            <option>Erkek</option>
+            <option>Evli Erkek</option>
+            <option>Nafaka Ödeyen Erkek</option>
+            </select></div>
+            <div class="labels">Bareminiz</div>
+             <div class="value dropdown-value"><select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            </select></div>
+            <div class="labels">Kademiniz</div>
+             <div class="value dropdown-value"><select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            </select></div>
+            <div class="label">Asıl Brüt Maas %</div>
+            <div class="value">4,101.532.16</div>
+            <div class="labels">Ek Tahsisat %</div>
+            <div class="value dropdown-value"><select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            </select></div>
+            <div class="label">Ek Tahsisat Miktarı</div>
+            <div class="value">64,002.00</div>
+            <div class="label">Fill Brüt Maas</div>
+            <div class="value">105,614.24</div>
+            <div class="labels">Sosyal Sigorta Kesintisi %</div>
+            <div class="value dropdown-value"><select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            </select></div>
+            <div class="label">Sosyal Sigorta Kesinti Miktarı</div>
+            <div class="value">8,737.05</div>
+            <div class="labels">İhtiyat Sandığı Kesintisi %</div>
+            <div class="value dropdown-value"><select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            </select></div>
+            <div class="label">İhtiyat Sandığı Kesinti Miktan</div>
+            <div class="value">4,224.57</div>
+            <div class="labels">Sendika Katkısı %</div>
+            <div class="value dropdown-value"><select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            </select></div>
+            <div class="label">Sendika Katkısı Miktarı</div>
+            <div class="value">1,056.14</div>
+            <div class="labels">Sabit Gider (Aidat, bagis, taksit vs)</div>
+            <div class="value input-value"><input type="text" value="0"></div>
+            <div class="labels">Belediye Meslek Vergisi İndirimi</div>
+            <div class="value input-value"><input type="text" value="0"></div>
+            <div class="label">Geli Vergisi Tab Maas</div>
+            <div class="value">689,011.03</div>
+            <div class="label">Özel Indirim (10%)</div>
+            <div class="value">68,901.16</div>
+            <div class="label">Şahsi Indirim (13 Maasi)</div>
+            <div class="value">8,124.17</div>
+            <div class="labels">A Kategorisindeki cocuk sayisi</div>
+            <div class="value input-value"><input type="text" value="0"></div>
+            <div class="labels">B Kategorisindeki cocuk sayisi</div>
+            <div class="value input-value"><input type="text" value="0"></div>
+            <div class="labels">C Kategorisindeki cocuk sayisi</div>
+            <div class="value input-value"><input type="text" value="0"></div>
+            <div class="labels">Cocugun diger ebeveyni maasi</div>
+            <div class="value input-value"><input type="text" value="0"></div>
+            <div class="label">Cocuk Indirim Miktan</div>
+            <div class="value">0</div>
+            <div class="label">Esnafaka Indirim Miktari</div>
+            <div class="value">62,293.05</div>
+            <div class="labels">Yillik top lam hay at sigorta odeme</div>
+            <div class="value input-value"><input type="text" value="0"></div>
+            <div class="label">Hayat sigortasi indirimi</div>
+            <div class="value">0</div>
+            <div class="labels">Calışma Gücü Kaybı</div>
+            <div class="value dropdown-value"><select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            </select></div>
+            <div class="label">Sakatlık indirimi</div>
+            <div class="value">0</div>
+            <div class="labels">65 yasini doldurum</div>
+            <div class="value checkbox-value"><input type="checkbox"></div>
+            <div class="label">Yasli Indirim</div>
+            <div class="value">0</div>
+            <div class="label">Vergilendirileb il Kisim</div>
+            <div class="value">4,453.35</div>
+            <div class="label">Vergi Ilk 45bin (10%)</div>
+            <div class="value blue">4,453.35</div>
+            <div class="label">vergi ek 45bin (20%)</div>
+            <div class="value blue">8,692.31</div>
+            <div class="label">vergi ek 120bin (25%)</div>
+            <div class="value blue">62,307.09</div>
+            <div class="label">vergi ek 200,000 (30%)</div>
+            <div class="value blue">4,384.62</div>
+            <div class="label">vergi ek 500,000 (37%)</div>
+            <div class="value blue">4,533.80</div>
+            <div class="label">Toplam odenecek gelir vergisi</div>
+            <div class="value">12,564.57</div>
+            <div class="label">Odediginiz gelir vergisi net maas or an:</div>
+            <div class="value">15.83%</div>
+            <div class="label">Net Maas</div>
+            <div class="value">79,390.92</div>
+        </div>
+        <div class="signature">Emre Uyguroðlu</div>
+    </div>
+</body>
+</html>
