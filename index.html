@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEP9BZBMR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7QEP9BZBMR');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Net Maas Hesap Makinesi</title>
@@ -12,64 +22,80 @@
             margin: 0;
             padding: 0;
         }
+
         .container {
             min-width: 360px;
             max-width: 550px;
             margin: 0 auto;
             padding: 10px;
         }
+
         .header {
             text-align: left;
         }
+
         .logo {
             display: inline-block;
             background: #0000ff;
-            color: #fff;
             border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            line-height: 20px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
             text-align: center;
             font-weight: bold;
             font-size: 14px;
         }
+
         .header-title {
             display: inline;
             font-size: 14px;
             font-weight: bold;
         }
+
         .main-title {
             font-size: 16px;
             font-weight: bold;
         }
+
         .subtitle {
             font-size: 11px;
         }
+
         .red-text {
             color: red;
             font-weight: bold;
             font-size: 11px;
         }
+
         .form {
             display: grid;
             grid-template-columns: 70% 30%;
             border: 1px solid #a0a0a0;
         }
-        .label, .value {
+
+        .label,
+        .value {
             padding: 3px 5px;
+            font-size: 11px;
 
         }
+
         .labels {
-            background: #e0e0e0;
+            background: #b7b7b7;
+            padding: 3px 5px;
         }
+
         .value {
             background: #fff;
             text-align: right;
         }
+
         .input-value {
+            position: relative;
             background: #ffd966;
-            border: 1px solid #ff0000;
+            outline: 2px solid #ff0000;
         }
+
         .input-value input {
             width: 100%;
             border: none;
@@ -77,12 +103,14 @@
             text-align: center;
             font-weight: bold;
         }
+
         .dropdown-value {
             position: relative;
             background: #ffd966;
             text-align: right;
-            border: 1px solid #ff0000;
+            outline: 2px solid #ff0000;
         }
+
         .dropdown-value select {
             width: 100%;
             border: none;
@@ -92,6 +120,7 @@
             font-weight: bold;
             padding-right: 15px;
         }
+
         .dropdown-value::after {
             content: '';
             position: absolute;
@@ -105,227 +134,358 @@
             border-top: 5px solid gray;
             pointer-events: none;
         }
+
         .checkbox-value {
+            position: relative;
             background: #ffd966;
             text-align: center;
-            border: 1px solid #ff0000;
+            outline: 2px solid #ff0000;
         }
+
         .checkbox-value input[type="checkbox"] {
             margin: 0;
             float: center;
         }
+
         .blue {
             color: #0000ff;
         }
+
         .signature {
             text-align: right;
             font-size: 12px;
             margin-top: 5px;
         }
+          .mycontainer {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+img {
+
+  padding-right: 50px;
+}
+
+.text {
+  font-size: 12px;
+}
     </style>
 </head>
+
 <body>
+        <div class="mycontainer">
+      <div class="image">
+        <img src="logo.png" width="60px" >
+      </div>
+      <div class="text">
+        <h2>GÖÇ YASALI (47/2010)</h2>
+        <h1>Net Maaş Hesap Makinesi</h1>
+      </div>
+    </div>
     <div class="container">
-        <div class="header">
-            <div class="logo">C</div><span class="header-title"> GÖÇ YASALI (4721/2010)</span>
-            <div class="main-title">Net Maas Hesap Makinesi</div>
-        </div>
+
         <div class="form">
             <div class="labels">Cinsiyet / Medeni Durum</div>
-            <div class="value dropdown-value"><select>
-            <option>Kadın</option>
-            <option>Erkek</option>
-            <option>Evli Erkek</option>
-            <option>Nafaka Ödeyen Erkek</option>
-            </select></div>
+            <div class="value dropdown-value"><select id="Medeni" onchange="calculate()">
+                    <option>Kadın</option>
+                    <option>Erkek</option>
+                    <option>Evli Erkek</option>
+                    <option>Nafaka Ödeyen Erkek</option>
+                </select></div>
             <div class="labels">Bareminiz</div>
-             <div class="value dropdown-value"><select>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-            <option>13</option>
-            <option>14</option>
-            <option>15</option>
-            <option>16</option>
-            <option>17</option>
-            <option>18</option>
-            <option>19</option>
-            </select></div>
+            <div class="value dropdown-value"><select id="Barem" onchange="calculate()">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                </select></div>
             <div class="labels">Kademiniz</div>
-             <div class="value dropdown-value"><select>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-            <option>13</option>
-            <option>14</option>
-            </select></div>
-            <div class="label">Asıl Brüt Maas %</div>
-            <div class="value">4,101.532.16</div>
+            <div class="value dropdown-value"><select id="Kademe" onchange="calculate()">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                </select></div>
+            <div class="label">Asli Brüt Maas</div>
+            <div class="value" id="AsliBrut">4,101.532.16</div>
             <div class="labels">Ek Tahsisat %</div>
-            <div class="value dropdown-value"><select>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-            <option>13</option>
-            <option>14</option>
-            </select></div>
+            <div class="value dropdown-value"><select id="Tahsisat" onchange="calculate()">
+                    <option>0</option>
+                    <option>2.5</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>10</option>
+                    <option>13</option>
+                    <option>15</option>
+                    <option>20.5</option>
+                    <option>30</option>
+                    <option>81</option>
+                </select></div>
             <div class="label">Ek Tahsisat Miktarı</div>
-            <div class="value">64,002.00</div>
-            <div class="label">Fill Brüt Maas</div>
-            <div class="value">105,614.24</div>
+            <div class="value" id="EkTahsisatValue">64,002.00</div>
+            <div class="label">Fiili Brüt Maas</div>
+            <div class="value" id="FiiliValue">105,614.24</div>
             <div class="labels">Sosyal Sigorta Kesintisi %</div>
-            <div class="value dropdown-value"><select>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-            <option>13</option>
-            <option>14</option>
-            </select></div>
+            <div class="value dropdown-value"><select id="Sosyal" onchange="calculate()">
+                    <option>3</option>
+                    <option>4</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8.25</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>15</option>
+                </select></div>
             <div class="label">Sosyal Sigorta Kesinti Miktarı</div>
-            <div class="value">8,737.05</div>
+            <div class="value" id="SosyalValue">8,737.05</div>
             <div class="labels">İhtiyat Sandığı Kesintisi %</div>
-            <div class="value dropdown-value"><select>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-            <option>13</option>
-            <option>14</option>
-            </select></div>
+            <div class="value dropdown-value"><select id="Ihtiyat" onchange="calculate()">
+                    <option>0</option>
+                    <option>3.5</option>
+                    <option>3.75</option>
+                    <option>4</option>
+                    <option>4.6</option>
+                    <option>5</option>
+                    <option>7.5</option>
+                    <option>15</option>
+                </select></div>
             <div class="label">İhtiyat Sandığı Kesinti Miktan</div>
-            <div class="value">4,224.57</div>
+            <div class="value" id="ihtiyatValue">4,224.57</div>
             <div class="labels">Sendika Katkısı %</div>
-            <div class="value dropdown-value"><select>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-            <option>13</option>
-            <option>14</option>
-            </select></div>
+            <div class="value dropdown-value"><select id="Sendika" onchange="calculate()">
+                    <option>0</option>
+                    <option>0.5</option>
+                    <option>0.6</option>
+                    <option>0.8</option>
+                    <option>0.86</option>
+                    <option>1</option>
+                    <option>1.25</option>
+                    <option>1.6</option>
+                    <option>1.75</option>
+                    <option>1.8</option>
+                </select></div>
             <div class="label">Sendika Katkısı Miktarı</div>
-            <div class="value">1,056.14</div>
+            <div class="value" id="sendikaValue">1,056.14</div>
             <div class="labels">Sabit Gider (Aidat, bagis, taksit vs)</div>
-            <div class="value input-value"><input type="text" value="0"></div>
+            <div class="value input-value"><input type="text" id="Sabit" onchange="calculate()"></div>
             <div class="labels">Belediye Meslek Vergisi İndirimi</div>
-            <div class="value input-value"><input type="text" value="0"></div>
-            <div class="label">Geli Vergisi Tab Maas</div>
-            <div class="value">689,011.03</div>
+            <div class="value input-value"><input type="text" id="BMV" value="0" onchange="calculate()"></div>
+            <div class="label">Gelir Vergisine Tabi Maas</div>
+            <div class="value" id="gelirValue">689,011.03</div>
             <div class="label">Özel Indirim (10%)</div>
-            <div class="value">68,901.16</div>
+            <div class="value" id="ozelValue">68,901.16</div>
             <div class="label">Şahsi Indirim (13 Maasi)</div>
-            <div class="value">8,124.17</div>
+            <div class="value" id="sahisValue">8,124.17</div>
             <div class="labels">A Kategorisindeki cocuk sayisi</div>
-            <div class="value input-value"><input type="text" value="0"></div>
+            <div class="value input-value"><input type="text" value="0" id="Acocuk" onchange="calculate()"></div>
             <div class="labels">B Kategorisindeki cocuk sayisi</div>
-            <div class="value input-value"><input type="text" value="0"></div>
+            <div class="value input-value"><input type="text" value="0" id="Bcocuk" onchange="calculate()"></div>
             <div class="labels">C Kategorisindeki cocuk sayisi</div>
-            <div class="value input-value"><input type="text" value="0"></div>
-            <div class="labels">Cocugun diger ebeveyni maasi</div>
-            <div class="value input-value"><input type="text" value="0"></div>
-            <div class="label">Cocuk Indirim Miktan</div>
-            <div class="value">0</div>
-            <div class="label">Esnafaka Indirim Miktari</div>
-            <div class="value">62,293.05</div>
-            <div class="labels">Yillik top lam hay at sigorta odeme</div>
-            <div class="value input-value"><input type="text" value="0"></div>
+            <div class="value input-value"><input type="text" value="0" id="Ccocuk" onchange="calculate()"></div>
+            <div class="labels">Cocugun diger ebeveyni maaşlı</div>
+            <div class="value input-value"><input type="checkbox" id="diger" onchange="calculate()"></div>
+            <div class="label">Çocuk Indirim Miktan</div>
+            <div class="value" id="cocukValue">0</div>
+            <div class="label">3+ Çocuk Indirim Miktan</div>
+            <div class="value" id="cocukPlusValue">0</div>
+            <div class="label">Es / Nafaka Indirim Miktari</div>
+            <div class="value" id="esnaf">62,293.05</div>
+            <div class="labels">Yillik toplam hayat sigorta odemeniz</div>
+            <div class="value input-value"><input type="text" value="0" id="Hayat" onchange="calculate()"></div>
             <div class="label">Hayat sigortasi indirimi</div>
-            <div class="value">0</div>
+            <div class="value" id="hayatValue">0</div>
             <div class="labels">Calışma Gücü Kaybı</div>
-            <div class="value dropdown-value"><select>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-            <option>13</option>
-            <option>14</option>
-            </select></div>
+            <div class="value dropdown-value"><select id="Kayip" onchange="calculate()">
+                    <option>0%</option>
+                    <option>50%</option>
+                    <option>100%</option>
+                </select></div>
             <div class="label">Sakatlık indirimi</div>
-            <div class="value">0</div>
+            <div class="value" id="sakatValue">0</div>
             <div class="labels">65 yasini doldurum</div>
-            <div class="value checkbox-value"><input type="checkbox"></div>
+            <div class="value checkbox-value"><input type="checkbox" id="Yasli" onchange="calculate()"></div>
             <div class="label">Yasli Indirim</div>
-            <div class="value">0</div>
-            <div class="label">Vergilendirileb il Kisim</div>
-            <div class="value">4,453.35</div>
+            <div class="value" id="yasliValue">0</div>
+            <div class="label">Vergilendirilebilir Kisim</div>
+            <div class="value" id="vergilendir">4,453.35</div>
             <div class="label">Vergi Ilk 45bin (10%)</div>
-            <div class="value blue">4,453.35</div>
+            <div class="value" id="dilim1">4,453.35</div>
             <div class="label">vergi ek 45bin (20%)</div>
-            <div class="value blue">8,692.31</div>
+            <div class="value" id="dilim2">8,692.31</div>
             <div class="label">vergi ek 120bin (25%)</div>
-            <div class="value blue">62,307.09</div>
+            <div class="value" id="dilim3">62,307.09</div>
             <div class="label">vergi ek 200,000 (30%)</div>
-            <div class="value blue">4,384.62</div>
+            <div class="value" id="dilim4">4,384.62</div>
             <div class="label">vergi ek 500,000 (37%)</div>
-            <div class="value blue">4,533.80</div>
+            <div class="value" id="dilim5">4,533.80</div>
             <div class="label">Toplam odenecek gelir vergisi</div>
-            <div class="value">12,564.57</div>
+            <div class="value" id="toplamVergi">12,564.57</div>
             <div class="label">Odediginiz gelir vergisi net maas or an:</div>
-            <div class="value">15.83%</div>
-            <div class="label">Net Maas</div>
-            <div class="value">79,390.92</div>
+            <div class="value" id="netoran">15.83%</div>
+            <div class="label" style="font-size: 19px;font-weight: bold;border-top-style: double;border-color: #000;">Net Maaş</div>
+            <div class="value" id="netmaas" style="font-size: 19px;font-weight: bold;color: #ff0000;;border-top-style: double;border-color: #000">79,390.92</div>
         </div>
-        <div class="signature">Emre Uyguroðlu</div>
+        <div class="signature">Emre Uyguroğlu</div>
     </div>
+    <script>
+        let barem = [76417.08,
+            88191.01,
+            99963.99,
+            114295.03,
+            83121.96,
+            96710.61,
+            110847.68,
+            129555.03,
+            91877.46,
+            116884.70,
+            138449.19,
+            174972.29,
+            209370.05,
+            214604.30,
+            146794.92,
+            154617.58,
+            174972.29,
+            213057.87,
+            262834.63
+        ]
+        let bia = [1546.45,
+            1883.99,
+            2188.56,
+            2482.54,
+            1780.50,
+            2224.38,
+            2735.59,
+            3247.25,
+            3224.90,
+            3676.98,
+            4124.43,
+            4299.72,
+            4525.16,
+            4638.29,
+            3911.33,
+            4055.66,
+            4299.72,
+            4525.16,
+            4873.44
+        ]
+        kisiselIndirim = 480000;
+
+        function calculate() {
+            var baremChoice = document.getElementById("Barem").selectedIndex;
+            var medeniChoice = document.getElementById("Medeni").options[document.getElementById("Medeni").selectedIndex].text
+            var kademeChoice = document.getElementById("Kademe").selectedIndex;
+            var ekTahsisatChoice = document.getElementById("Tahsisat").options[document.getElementById("Tahsisat").selectedIndex].text;
+            var sosyalChoice = document.getElementById("Sosyal").options[document.getElementById("Sosyal").selectedIndex].text;
+            var ihtiyatChoice = document.getElementById("Ihtiyat").options[document.getElementById("Ihtiyat").selectedIndex].text;
+            var sendikaChoice = document.getElementById("Sendika").options[document.getElementById("Sendika").selectedIndex].text;
+
+            document.getElementById("AsliBrut").innerHTML = Math.round((barem[baremChoice] + bia[baremChoice] * kademeChoice) * 100) / 100;
+            document.getElementById("EkTahsisatValue").innerHTML = Math.round((document.getElementById("AsliBrut").innerHTML) * ekTahsisatChoice) / 100;
+            document.getElementById("FiiliValue").innerHTML = Math.round((parseFloat(document.getElementById("AsliBrut").innerHTML) + parseFloat(document.getElementById("EkTahsisatValue").innerHTML)) * 100) / 100;
+            document.getElementById("SosyalValue").innerHTML = Math.round((document.getElementById("AsliBrut").innerHTML) * sosyalChoice) / 100;
+            document.getElementById("ihtiyatValue").innerHTML = Math.round((document.getElementById("FiiliValue").innerHTML) * ihtiyatChoice) / 100;
+            document.getElementById("sendikaValue").innerHTML = Math.round((document.getElementById("FiiliValue").innerHTML) * sendikaChoice) / 100;
+            if ((document.getElementById("FiiliValue").innerHTML * 0.32) < document.getElementById("Hayat").value) {
+                document.getElementById("hayatValue").innerHTML = Math.round(document.getElementById("FiiliValue").innerHTML * 0.32 / 13 * 100) / 100
+            } else {
+                document.getElementById("hayatValue").innerHTML = Math.round(document.getElementById("Hayat").value / 13 * 100) / 100
+            }
+            document.getElementById("gelirValue").innerHTML = Math.round(((document.getElementById("FiiliValue").innerHTML) - document.getElementById("SosyalValue").innerHTML - document.getElementById("ihtiyatValue").innerHTML - document.getElementById("BMV").value / 13 - document.getElementById("hayatValue").innerHTML) * 100) / 100;
+            document.getElementById("ozelValue").innerHTML = Math.round((document.getElementById("gelirValue").innerHTML) * 0.1 * 100) / 100;
+            document.getElementById("sahisValue").innerHTML = Math.round(kisiselIndirim / 13 * 100) / 100;
+            if (!(document.getElementById("diger").checked)) {
+                document.getElementById("cocukValue").innerHTML = kisiselIndirim * 0.06 / 13 * document.getElementById("Acocuk").value + kisiselIndirim * 0.08 / 13 * document.getElementById("Bcocuk").value + kisiselIndirim * 0.11 / 13 * document.getElementById("Ccocuk").value
+            } else {
+                document.getElementById("cocukValue").innerHTML = kisiselIndirim * 0.06 / 13 * document.getElementById("Acocuk").value / 2 + kisiselIndirim * 0.08 / 13 * document.getElementById("Bcocuk").value / 2 + kisiselIndirim * 0.11 / 13 * document.getElementById("Ccocuk").value / 2
+            }
+            document.getElementById("cocukValue").innerHTML = Math.round(document.getElementById("cocukValue").innerHTML * 100) / 100
+            totalKids=parseInt(document.getElementById("Acocuk").value)+parseInt(document.getElementById("Bcocuk").value)+parseInt(document.getElementById("Ccocuk").value)
+            if (totalKids>=3) {
+                document.getElementById("cocukPlusValue").innerHTML =(0.15+(0.05*(totalKids-3)))*(document.getElementById("gelirValue").innerHTML-document.getElementById("ozelValue").innerHTML-document.getElementById("sahisValue").innerHTML-document.getElementById("cocukValue").innerHTML-document.getElementById("esnaf").innerHTML-document.getElementById("yasliValue").innerHTML-document.getElementById("sakatValue").innerHTML )
+                if((document.getElementById("diger").checked)){document.getElementById("cocukPlusValue").innerHTML=document.getElementById("cocukPlusValue").innerHTML/2}
+                document.getElementById("cocukPlusValue").innerHTML=Math.round(document.getElementById("cocukPlusValue").innerHTML*100)/100
+            } else {
+                document.getElementById("cocukPlusValue").innerHTML = 0;
+            }
+            if (medeniChoice == "Evli Erkek") {
+                document.getElementById("esnaf").innerHTML = kisiselIndirim * 0.08 / 13
+            } else if (medeniChoice == "Nafaka Ödeyen Erkek") {
+                document.getElementById("esnaf").innerHTML = kisiselIndirim * 0.04 / 13
+            } else {
+                document.getElementById("esnaf").innerHTML = 0
+            }
+            document.getElementById("esnaf").innerHTML = Math.round(document.getElementById("esnaf").innerHTML * 100) / 100
+            if (document.getElementById("Kayip").selectedIndex == 1) {
+                document.getElementById("sakatValue").innerHTML = kisiselIndirim * 0.15 / 13
+            } else if (document.getElementById("Kayip").selectedIndex == 2) {
+                document.getElementById("sakatValue").innerHTML = kisiselIndirim * 0.3 / 13
+            } else {
+                document.getElementById("sakatValue").innerHTML = 0
+            }
+            document.getElementById("sakatValue").innerHTML = Math.round(document.getElementById("sakatValue").innerHTML * 100) / 100
+            if (document.getElementById("Yasli").checked) {
+                document.getElementById("yasliValue").innerHTML = Math.round(kisiselIndirim * 0.05 / 13 * 100) / 100
+            } else {
+                document.getElementById("yasliValue").innerHTML = 0
+            }
+            document.getElementById("vergilendir").innerHTML=Math.round((document.getElementById("gelirValue").innerHTML-document.getElementById("ozelValue").innerHTML-document.getElementById("sahisValue").innerHTML-document.getElementById("cocukValue").innerHTML-document.getElementById("esnaf").innerHTML-document.getElementById("yasliValue").innerHTML-document.getElementById("sakatValue").innerHTML-document.getElementById("cocukPlusValue").innerHTML)*100)/100
+            if(document.getElementById("vergilendir").innerHTML-45000/13>0){document.getElementById("dilim1").innerHTML=45000/13*0.1}else {document.getElementById("dilim1").innerHTML=document.getElementById("vergilendir").innerHTML*0.1}
+            document.getElementById("dilim1").innerHTML=Math.round(document.getElementById("dilim1").innerHTML*100)/100
+
+            if(document.getElementById("vergilendir").innerHTML-90000/13>0){document.getElementById("dilim2").innerHTML=(45000/13)*0.2} else if(document.getElementById("vergilendir").innerHTML-45000/13>0) {document.getElementById("dilim2").innerHTML=(document.getElementById("vergilendir").innerHTML-45000/13)*0.2} else{document.getElementById("dilim2").innerHTML=0}
+            document.getElementById("dilim2").innerHTML=Math.round(document.getElementById("dilim2").innerHTML*100)/100
+
+            if(document.getElementById("vergilendir").innerHTML-210000/13>0){document.getElementById("dilim3").innerHTML=(120000/13)*0.25} else if(document.getElementById("vergilendir").innerHTML-90000/13>0) {document.getElementById("dilim3").innerHTML=(document.getElementById("vergilendir").innerHTML-90000/13)*0.25} else{document.getElementById("dilim3").innerHTML=0}
+            document.getElementById("dilim3").innerHTML=Math.round(document.getElementById("dilim3").innerHTML*100)/100
+
+            if(document.getElementById("vergilendir").innerHTML-400000/13>0){document.getElementById("dilim4").innerHTML=(190000/13)*0.30} else if(document.getElementById("vergilendir").innerHTML-210000/13>0) {document.getElementById("dilim4").innerHTML=(document.getElementById("vergilendir").innerHTML-210000/13)*0.30} else{document.getElementById("dilim4").innerHTML=0}
+            document.getElementById("dilim4").innerHTML=Math.round(document.getElementById("dilim4").innerHTML*100)/100
+
+            if(document.getElementById("vergilendir").innerHTML-400000/13>0){document.getElementById("dilim5").innerHTML=(document.getElementById("vergilendir").innerHTML-400000/13)*0.37} else {document.getElementById("dilim5").innerHTML=0}
+            document.getElementById("dilim5").innerHTML=Math.round(document.getElementById("dilim5").innerHTML*100)/100
+
+            document.getElementById("toplamVergi").innerHTML=parseFloat(document.getElementById("dilim1").innerHTML)+parseFloat(document.getElementById("dilim2").innerHTML)+parseFloat(document.getElementById("dilim3").innerHTML)+parseFloat(document.getElementById("dilim4").innerHTML)+parseFloat(document.getElementById("dilim5").innerHTML)
+            document.getElementById("toplamVergi").innerHTML=Math.round(document.getElementById("toplamVergi").innerHTML*100)/100
+
+
+            document.getElementById("netmaas").innerHTML=document.getElementById("FiiliValue").innerHTML-document.getElementById("toplamVergi").innerHTML-document.getElementById("Sabit").innerHTML-document.getElementById("SosyalValue").innerHTML-document.getElementById("ihtiyatValue").innerHTML-document.getElementById("sendikaValue").innerHTML
+            document.getElementById("netmaas").innerHTML=Math.round(document.getElementById("netmaas").innerHTML*100)/100
+
+            document.getElementById("netoran").innerHTML=document.getElementById("toplamVergi").innerHTML/document.getElementById("netmaas").innerHTML
+            document.getElementById("netoran").innerHTML="%"+Math.round(document.getElementById("netoran").innerHTML*10000)/100
+
+        }
+        calculate()
+    </script>
 </body>
+
 </html>
