@@ -410,7 +410,7 @@ img {
             var ihtiyatChoice = document.getElementById("Ihtiyat").options[document.getElementById("Ihtiyat").selectedIndex].text;
             var sendikaChoice = document.getElementById("Sendika").options[document.getElementById("Sendika").selectedIndex].text;
 
-            document.getElementById("AsliBrut").innerHTML = Math.round((barem[baremChoice] + bia[baremChoice] * kademeChoice) * 100) / 100;
+            document.getElementById("AsliBrut").innerHTML = Math.round((barem[baremChoice] + bia[baremChoice] * kademeChoice) * 100*1.2166) / 100;
             document.getElementById("EkTahsisatValue").innerHTML = Math.round((document.getElementById("AsliBrut").innerHTML) * ekTahsisatChoice) / 100;
             document.getElementById("FiiliValue").innerHTML = Math.round((parseFloat(document.getElementById("AsliBrut").innerHTML) + parseFloat(document.getElementById("EkTahsisatValue").innerHTML)) * 100) / 100;
             document.getElementById("SosyalValue").innerHTML = Math.round((document.getElementById("AsliBrut").innerHTML) * sosyalChoice) / 100;
