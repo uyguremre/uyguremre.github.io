@@ -300,9 +300,9 @@ img {
             <div class="label">Sendika Katkısı Miktarı</div>
             <div class="value lira" id="sendikaValue">1,056.14</div>
             <div class="labels">Sabit Gider (Aidat, bagis, taksit vs)</div>
-            <div class="value input-value"><input type="text" id="Sabit" value="0" class="lira" onchange="calculate()"></div>
+            <div class="value input-value"><input type="text" id="Sabit" value="0" class="lira" oninput="calculate()"></div>
             <div class="labels">Belediye Meslek Vergisi İndirimi</div>
-            <div class="value input-value"><input type="text" id="BMV" value="0" class="lira" onchange="calculate()"></div>
+            <div class="value input-value"><input type="text" id="BMV" value="0" class="lira" oninput="calculate()"></div>
             <div class="label">Gelir Vergisine Tabi Maas</div>
             <div class="value lira" id="gelirValue">689,011.03</div>
             <div class="label">Özel İndirim (10%)</div>
@@ -310,11 +310,11 @@ img {
             <div class="label">Şahsi Indirim (13 Maaslı)</div>
             <div class="value lira" id="sahisValue">8,124.17</div>
             <div class="labels">A Kategorisindeki çocuk sayisi</div>
-            <div class="value input-value"><input type="text" value="0" id="Acocuk" onchange="calculate()"></div>
+            <div class="value input-value"><input type="text" value="0" id="Acocuk" oninput="calculate()"></div>
             <div class="labels">B Kategorisindeki çocuk sayisi</div>
-            <div class="value input-value"><input type="text" value="0" id="Bcocuk" onchange="calculate()"></div>
+            <div class="value input-value"><input type="text" value="0" id="Bcocuk" oninput="calculate()"></div>
             <div class="labels">C Kategorisindeki çocuk sayisi</div>
-            <div class="value input-value"><input type="text" value="0" id="Ccocuk" onchange="calculate()"></div>
+            <div class="value input-value"><input type="text" value="0" id="Ccocuk" oninput="calculate()"></div>
             <div class="labels">Çocugun diger ebeveyni maaşlı</div>
             <div class="value input-value"><input type="checkbox" id="diger" onchange="calculate()"></div>
             <div class="label">Çocuk İndirimi Miktan</div>
@@ -324,7 +324,7 @@ img {
             <div class="label">Eş / Nafaka İndirimi Miktari</div>
             <div class="value lira" id="esnaf">62,293.05</div>
             <div class="labels">Yıllık toplam hayat sigortası ödemeniz</div>
-            <div class="value input-value"><input type="text" value="0" id="Hayat" class="lira" onchange="calculate()"></div>
+            <div class="value input-value"><input type="text" value="0" id="Hayat" class="lira" oninput="calculate()"></div>
             <div class="label">Hayat sigortası indirimi</div>
             <div class="value lira" id="hayatValue">0</div>
             <div class="labels">Çalışma Gücü Kaybı</div>
