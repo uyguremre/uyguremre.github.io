@@ -253,6 +253,8 @@ img {
                     <option>30</option>
                     <option>81</option>
                 </select></div>
+            <div class="labels">Ek Tahsisat ₺</div>
+            <div class="value input-value"><input type="text" value="0" id="TahsisatTL" oninput="calculate()"></div>
             <div class="label">Ek Tahsisat Miktarı</div>
             <div class="value lira" id="EkTahsisatValue">64,002.00</div>
             <div class="label">Fiili Brüt Maaş</div>
@@ -413,7 +415,7 @@ img {
             var sendikaChoice = document.getElementById("Sendika").options[document.getElementById("Sendika").selectedIndex].text;
 
             document.getElementById("AsliBrut").innerHTML = Math.round((barem[baremChoice] + bia[baremChoice] * kademeChoice) * 100*1.2166) / 100;
-            document.getElementById("EkTahsisatValue").innerHTML = Math.round((document.getElementById("AsliBrut").innerHTML) * ekTahsisatChoice) / 100;
+            document.getElementById("EkTahsisatValue").innerHTML = Math.round((document.getElementById("AsliBrut").innerHTML) * ekTahsisatChoice) / 100 + document.getElementById("TahsisatTL").value;
             document.getElementById("FiiliValue").innerHTML = Math.round((parseFloat(document.getElementById("AsliBrut").innerHTML) + parseFloat(document.getElementById("EkTahsisatValue").innerHTML)) * 100) / 100;
             document.getElementById("SosyalValue").innerHTML = Math.round((document.getElementById("AsliBrut").innerHTML) * sosyalChoice) / 100;
             document.getElementById("ihtiyatValue").innerHTML = Math.round((document.getElementById("FiiliValue").innerHTML) * ihtiyatChoice) / 100;
