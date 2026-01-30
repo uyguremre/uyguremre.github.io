@@ -483,7 +483,7 @@ img {
             document.getElementById("toplamVergi").innerHTML=Math.round(document.getElementById("toplamVergi").innerHTML*100)/100
 
 
-            document.getElementById("netmaas").innerHTML=document.getElementById("FiiliValue").innerHTML-document.getElementById("toplamVergi").innerHTML-document.getElementById("Sabit").innerHTML-document.getElementById("SosyalValue").innerHTML-document.getElementById("ihtiyatValue").innerHTML-document.getElementById("sendikaValue").innerHTML
+            document.getElementById("netmaas").innerHTML=document.getElementById("FiiliValue").innerHTML-document.getElementById("toplamVergi").innerHTML-document.getElementById("Sabit").value-document.getElementById("SosyalValue").innerHTML-document.getElementById("ihtiyatValue").innerHTML-document.getElementById("sendikaValue").innerHTML
             document.getElementById("netmaas").innerHTML=Math.round(document.getElementById("netmaas").innerHTML*100)/100
 
             document.getElementById("netoran").innerHTML=document.getElementById("toplamVergi").innerHTML/document.getElementById("netmaas").innerHTML
