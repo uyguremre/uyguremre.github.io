@@ -428,8 +428,8 @@ img {
             document.getElementById("gelirValue").innerHTML = Math.round(((document.getElementById("FiiliValue").innerHTML) - document.getElementById("SosyalValue").innerHTML - document.getElementById("ihtiyatValue").innerHTML - document.getElementById("BMV").value / 13 - document.getElementById("hayatValue").innerHTML) * 100) / 100;
             document.getElementById("ozelValue").innerHTML = Math.round((document.getElementById("gelirValue").innerHTML) * 0.1 * 100) / 100;
             document.getElementById("sahisValue").innerHTML = Math.round(kisiselIndirim / 13 * 100) / 100;
-            if (!(document.getElementById("diger").checked)) {
-                document.getElementById("cocukValue").innerHTML = kisiselIndirim * 0.06 / 13 * document.getElementById("Acocuk").value + kisiselIndirim * 0.08 / 13 * document.getElementById("Bcocuk").value + kisiselIndirim * 0.11 / 13 * document.getElementById("Ccocuk").value
+            if ((Math.round( document.getElementById("SosyalValue").innerHTML*100)/100 + Math.round(document.getElementById("ihtiyatValue").innerHTML*100)/100)*13 < document.getElementById("Hayat").value) {
+                document.getElementById("hayatValue").innerHTML = (Math.round( document.getElementById("SosyalValue").innerHTML*100)/100 + Math.round(document.getElementById("ihtiyatValue").innerHTML*100)/100)
             } else {
                 document.getElementById("cocukValue").innerHTML = kisiselIndirim * 0.06 / 13 * document.getElementById("Acocuk").value / 2 + kisiselIndirim * 0.08 / 13 * document.getElementById("Bcocuk").value / 2 + kisiselIndirim * 0.11 / 13 * document.getElementById("Ccocuk").value / 2
             }
