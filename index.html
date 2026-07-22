@@ -363,45 +363,45 @@ img {
         <div class="signature">© Emre Uyguroğlu <a href="https://chat.whatsapp.com/KHdFvP8CX2ZLRJJl7vGxQ8">Göç Yasası Whatsapp Topluluğu</a></div>
     </div>
     <script>
-        let barem = [76417.08,
-            88191.01,
-            99963.99,
-            114295.03,
-            83121.96,
-            96710.61,
-            110847.68,
-            129555.03,
-            91877.46,
-            116884.70,
-            138449.19,
-            174972.29,
-            209370.05,
-            214604.30,
-            146794.92,
-            154617.58,
-            174972.29,
-            213057.87,
-            262834.63
+        let barem = [108727.27,
+            125479.37,
+            142230.13,
+            162620.53,
+            118267.07,
+            137601.18,
+            157715.60,
+            184332.67,
+            130724.51,
+            166305.16,
+            196987.40,
+            248952.97,
+            297864.57,
+            305341.93,
+            208861.82,
+            219992.00,
+            248952.97,
+            303141.65,
+            373964.71
         ]
-        let bia = [1546.45,
-            1883.99,
-            2188.56,
-            2482.54,
-            1780.50,
-            2224.38,
-            2735.59,
-            3247.25,
-            3224.90,
-            3676.98,
-            4124.43,
-            4299.72,
-            4525.16,
-            4638.29,
-            3911.33,
-            4055.66,
-            4299.72,
-            4525.16,
-            4873.44
+        let bia = [2200.31,
+            2680.56,
+            3113.91,
+            3532.19,
+            2533.32,
+            3164.88,
+            3892.24,
+            4620.23,
+            4588.43,
+            5231.65,
+            5868.29,
+            6117.70,
+            6438.46,
+            6599.42,
+            5565.09,
+            5770.45,
+            6117.70,
+            6438.46,
+            6934.00
         ]
         kisiselIndirim = 655000;
 
@@ -414,7 +414,7 @@ img {
             var ihtiyatChoice = document.getElementById("Ihtiyat").options[document.getElementById("Ihtiyat").selectedIndex].text;
             var sendikaChoice = document.getElementById("Sendika").options[document.getElementById("Sendika").selectedIndex].text;
 
-            document.getElementById("AsliBrut").innerHTML = Math.round((barem[baremChoice] + bia[baremChoice] * kademeChoice) * 100*1.2166*1.1695) / 100;
+            document.getElementById("AsliBrut").innerHTML = Math.round((barem[baremChoice] + bia[baremChoice] * kademeChoice) * 100) / 100;
             document.getElementById("EkTahsisatValue").innerHTML = Math.round((document.getElementById("AsliBrut").innerHTML) * ekTahsisatChoice) / 100 + Math.round(document.getElementById("TahsisatTL").value* 100) / 100;
             document.getElementById("FiiliValue").innerHTML = Math.round((parseFloat(document.getElementById("AsliBrut").innerHTML) + parseFloat(document.getElementById("EkTahsisatValue").innerHTML)) * 100) / 100;
             document.getElementById("SosyalValue").innerHTML = Math.round((document.getElementById("AsliBrut").innerHTML) * sosyalChoice) / 100;
