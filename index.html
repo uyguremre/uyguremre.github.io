@@ -443,10 +443,10 @@ img {
             document.getElementById("SosyalValue").innerHTML = Math.round((document.getElementById("AsliBrut").innerHTML) * sosyalChoice) / 100;
             document.getElementById("ihtiyatValue").innerHTML = Math.round((document.getElementById("FiiliValue").innerHTML) * ihtiyatChoice) / 100;
             document.getElementById("sendikaValue").innerHTML = Math.round((document.getElementById("FiiliValue").innerHTML) * sendikaChoice) / 100;
-           if ((Math.round( document.getElementById("SosyalValue").innerHTML*100)/100 + Math.round(document.getElementById("ihtiyatValue").innerHTML*100)/100)*13 < document.getElementById("Hayat").value) {
+           if ((Math.round( document.getElementById("SosyalValue").innerHTML*100)/100 + Math.round(document.getElementById("ihtiyatValue").innerHTML*100)/100)*12 < document.getElementById("Hayat").value) {
                 document.getElementById("hayatValue").innerHTML = (Math.round( document.getElementById("SosyalValue").innerHTML*100)/100 + Math.round(document.getElementById("ihtiyatValue").innerHTML*100)/100)
             } else {
-                document.getElementById("hayatValue").innerHTML = Math.round(document.getElementById("Hayat").value / 13 * 100) / 100
+                document.getElementById("hayatValue").innerHTML = Math.round(document.getElementById("Hayat").value / 12 * 100) / 100
             }
             document.getElementById("gelirValue").innerHTML = Math.round(((document.getElementById("FiiliValue").innerHTML) - document.getElementById("SosyalValue").innerHTML - document.getElementById("ihtiyatValue").innerHTML - document.getElementById("BMV").value / 13 - document.getElementById("hayatValue").innerHTML) * 100) / 100;
             document.getElementById("ozelValue").innerHTML = Math.round((document.getElementById("gelirValue").innerHTML) * 0.1 * 100) / 100;
